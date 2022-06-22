@@ -17,6 +17,8 @@ export const addArticle = (article) => {
   };
 };
 
+
+
 const initialState = { entries: [], isLoading: true };
 
 const articleReducer = (state = initialState, action) => {

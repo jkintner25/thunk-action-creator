@@ -17,7 +17,11 @@ export const addArticle = (article) => {
   };
 };
 
-
+export const fetchArticles = () => async dispatch => {
+  const response = await fetch('/api/articles');
+  const articles = await response.json();
+  dispatch(loadArticles(articles));
+};
 
 const initialState = { entries: [], isLoading: true };
 
